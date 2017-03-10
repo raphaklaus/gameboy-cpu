@@ -17,5 +17,5 @@ In the first case, numbers are unsigned from 0 to 255, in the second from -128 t
 Holds the X and Y and other informations.
 
 ## References:
-http://marc.rawer.de/Gameboy/Docs/GBCPUman.pdf
-http://www.chrisantonellis.com/files/gameboy/gb-programming-manual.pdf
+* http://marc.rawer.de/Gameboy/Docs/GBCPUman.pdf
+* http://www.chrisantonellis.com/files/gameboy/gb-programming-manual.pdf
