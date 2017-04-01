@@ -1,0 +1,26 @@
+{
+  "name": "gameboy-cpu",
+  "version": "0.0.1",
+  "description": "High level JavaScript Nintendo Game Boy CPU emulator",
+  "main": "cpu.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node cpu.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raphaklaus/gameboy-cpu.git"
+  },
+  "author": "Raphael D. Pinheiro (raphaklaus)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raphaklaus/gameboy-cpu/issues"
+  },
+  "homepage": "https://github.com/raphaklaus/gameboy-cpu#readme",
+  "dependencies": {
+    "bluebird": "^3.5.0"
+  }
+}
