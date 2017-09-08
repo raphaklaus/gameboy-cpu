@@ -4,7 +4,7 @@ const fs = require('bluebird').promisifyAll(require('fs')),
 module.exports = class RawReader {
   static async load() {
     try {
-      return await fs.readFileAsync(path.join(__dirname, 'test/roms/PokeRed.gb'));
+      return await fs.readFileAsync(path.join(__dirname, 'test/roms/Tetris.gb'));
     } catch (error) {
       console.log('Something went wrong!', error);
     }
