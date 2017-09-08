@@ -1,5 +1,6 @@
 const Rom = require('./RawReader.js'),
-  opcodes = require('./opcodes');
+  opcodes = require('./opcodes'),
+  utils = require('./utils.js');
 
 class CPU {
   constructor() {
@@ -21,7 +22,7 @@ class CPU {
       carry: ''
     };
 
-    this.memory = new Uint8Array(0x10000);
+    this.memory = new Uint8Array(0xFFFF);
   }
 
   async loadROM() {
@@ -35,10 +36,14 @@ class CPU {
     //   opcodes.read(rom[index]);
     // }
 
-    while (this.registers.pc < 0xa) {
-      let info = opcodes.read(rom, this.registers, this.flags);
+    while (this.registers.pc < 0xFFFF) {
+      console.log('I am at offset:', utils.toHex(this.registers.pc));
+      let info = opcodes.read(rom, this.memory, this.registers, this.flags);
+      
+      if (!info.leap)
+        this.registers.pc += info.instructionByteLength;
+
       console.log(info.instructionPrint);
-      this.registers.pc += info.instructionByteLength;
     }
 
     // rom.forEach(byte => {
