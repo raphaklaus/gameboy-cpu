@@ -20,24 +20,26 @@ const read = (rom, memory,registers, flags) => {
       let address = utils.toHexCompose(rom[registers.pc + 1], rom[registers.pc + 2]);
       info.instructionByteLength = 3;
       info.instructionPrint = `LD BC, ${address}`;
-      info.instructionMnemonic = 'LD BC,d16';
-      // todo: create some method to read and write from/to memory :)
+      info.instructionMnemonic = 'LD BC, d16';
+
       registers.bc = memory[parseInt(address, 16)];
       info.cycles = 12;
       break;
     }
     case 0x02: {
+      let address = registers.bc;
       let register = utils.getLowByte(registers.af);
       info.instructionByteLength = 1;
-      info.instructionPrint = `LD BC, A`;
+      info.instructionPrint = 'LD BC, A';
       info.instructionMnemonic = 'LD (BC), A';
-      registers.bc = register;
+
+      memory[parseInt(address, 16)] = register;
       info.cycles = 8;
       break;
     }
     case 0x03: {
       info.instructionByteLength = 1;
-      info.instructionPrint = `INC BC`;
+      info.instructionPrint = 'INC BC';
       info.instructionMnemonic = 'INC BC';
       registers.bc++;
       info.cycles = 8;
@@ -46,11 +48,11 @@ const read = (rom, memory,registers, flags) => {
     case 0x04: {
       let register = utils.getLowByte(registers.af);
       info.instructionByteLength = 1;
-      info.instructionPrint = `INC B`;
+      info.instructionPrint = 'INC B';
       info.instructionMnemonic = 'INC B';
-      registers.b++;
+      registers.bc++;
       
-      arithmetics.affectFlagsOnIncrement(registers.b);
+      arithmetics.affectFlagsOnIncrement(registers.bc);
 
       info.cycles = 4;
       break;
@@ -58,12 +60,12 @@ const read = (rom, memory,registers, flags) => {
     case 0x05: {
       let register = utils.getLowByte(registers.af);
       info.instructionByteLength = 1;
-      info.instructionPrint = `DEC B`;
+      info.instructionPrint = 'DEC B';
       info.instructionMnemonic = 'DEC B';
       
-      registers.b--;
+      registers.bc--;
 
-      arithmetics.affectFlagsOnDecrement(registers.b);
+      arithmetics.affectFlagsOnDecrement(registers.bc);
 
       info.cycles = 4;
       break;
@@ -74,7 +76,7 @@ const read = (rom, memory,registers, flags) => {
       info.instructionPrint = `LD B, ${address}`;
       info.instructionMnemonic = 'LD B, d8';
 
-      registers.b = parseInt(address, 16);
+      utils.setHighByte(registers.bc, address);
 
       info.cycles = 8;
       break;
@@ -85,7 +87,7 @@ const read = (rom, memory,registers, flags) => {
       info.instructionMnemonic = 'RLCA';
 
       let old7Bit = registers.a & 0x80;
-      registers.a = rotateByteLeft(registers.a);
+      registers.af = rotateByteLeft(registers.af);
 
       arithmetics.affectFlagOnRotateLeft(registers.a, flags, old7Bit);
 
@@ -96,7 +98,7 @@ const read = (rom, memory,registers, flags) => {
       let address = utils.toHexCompose(rom[registers.pc + 1], rom[registers.pc + 2]);
       info.instructionByteLength = 3;
       info.instructionPrint = `LD ${address}, SP`;
-      info.instructionMnemonic = 'LD (a16),SP';
+      info.instructionMnemonic = 'LD (a16), SP';
 
       memory[parseInt(address, 16)] = registers.sp;
 
@@ -104,7 +106,6 @@ const read = (rom, memory,registers, flags) => {
       break;
     }
     case 0x09: {
-      // let address = utils.toHexCompose(rom[registers.pc + 1], rom[registers.pc + 2]);
       info.instructionByteLength = 1;
       info.instructionPrint = `ADD HL, BC`;
       info.instructionMnemonic = 'ADD HL, BC';
@@ -138,6 +139,8 @@ const read = (rom, memory,registers, flags) => {
       info.instructionByteLength = 2;
       info.instructionPrint = 'STOP';
       info.cycles = 4;
+
+      // todo: Halt CPU and LCD until button pressed
     break;
     }
     case 0x11: {
@@ -165,6 +168,15 @@ const read = (rom, memory,registers, flags) => {
       break;
     }
     case 0x19: {
+      info.instructionByteLength = 1;
+      info.instructionPrint = `ADD HL, DE`;
+      info.instructionMnemonic = 'ADD HL, DE';
+
+      registers.hl += registers.de;
+
+      arithmetics.affectFlagOnAdd(registers.hl);
+
+      info.cycles = 8;
       break;
     }
     case 0x1A: {
@@ -213,6 +225,15 @@ const read = (rom, memory,registers, flags) => {
       break;
     }
     case 0x29: {
+      info.instructionByteLength = 1;
+      info.instructionPrint = `ADD HL, HL`;
+      info.instructionMnemonic = 'ADD HL, HL';
+
+      registers.hl += registers.hl;
+
+      arithmetics.affectFlagOnAdd(registers.hl);
+
+      info.cycles = 8;
       break;
     }
     case 0x2A: {
@@ -261,6 +282,15 @@ const read = (rom, memory,registers, flags) => {
       break;
     }
     case 0x39: {
+      info.instructionByteLength = 1;
+      info.instructionPrint = `ADD HL, SP`;
+      info.instructionMnemonic = 'ADD HL, SP';
+
+      registers.hl += registers.sp;
+
+      arithmetics.affectFlagOnAdd(registers.hl);
+
+      info.cycles = 8;
       break;
     }
     case 0x3A: {
@@ -690,186 +720,186 @@ const read = (rom, memory,registers, flags) => {
       break;
     }
 
-    case 0xC4: {
-      break;
-    }
-    case 0xC5: {
-      break;
-    }
-    case 0xC6: {
-      break;
-    }
-    case 0xC7: {
-      break;
-    }
-    case 0xC8: {
-      break;
-    }
-    case 0xC9: {
-      break;
-    }
-    case 0xCA: {
-      break;
-    }
-    case 0xCB: {
-      break;
-    }
-    case 0xCC: {
-      break;
-    }
-    case 0xCD: {
-      break;
-    }
-    case 0xCE: {
-      break;
-    }
-    case 0xCF: {
-      break;
-    }
-    case 0xD0: {
-      break;
-    }
-    case 0xD1: {
-      break;
-    }
-    case 0xD2: {
-      break;
-    }
-    case 0xD3: {
-      break;
-    }
-    case 0xD4: {
-      break;
-    }
-    case 0xD5: {
-      break;
-    }
-    case 0xD6: {
-      break;
-    }
-    case 0xD7: {
-      break;
-    }
-    case 0xD8: {
-      break;
-    }
-    case 0xD9: {
-      break;
-    }
-    case 0xDA: {
-      break;
-    }
-    case 0xDB: {
-      break;
-    }
-    case 0xDC: {
-      break;
-    }
-    case 0xDD: {
-      break;
-    }
-    case 0xDE: {
-      break;
-    }
-    case 0xDF: {
-      break;
-    }
-    case 0xE0: {
-      break;
-    }
-    case 0xE1: {
-      break;
-    }
-    case 0xE2: {
-      break;
-    }
-    case 0xE3: {
-      break;
-    }
-    case 0xE4: {
-      break;
-    }
-    case 0xE5: {
-      break;
-    }
-    case 0xE6: {
-      break;
-    }
-    case 0xE7: {
-      break;
-    }
-    case 0xE8: {
-      break;
-    }
-    case 0xE9: {
-      break;
-    }
-    case 0xEA: {
-      break;
-    }
-    case 0xEB: {
-      break;
-    }
-    case 0xEC: {
-      break;
-    }
-    case 0xED: {
-      break;
-    }
-    case 0xEE: {
-      break;
-    }
-    case 0xEF: {
-      break;
-    }
-    case 0xF0: {
-      break;
-    }
-    case 0xF1: {
-      break;
-    }
-    case 0xF2: {
-      break;
-    }
-    case 0xF3: {
-      break;
-    }
-    case 0xF4: {
-      break;
-    }
-    case 0xF5: {
-      break;
-    }
-    case 0xF6: {
-      break;
-    }
-    case 0xF7: {
-      break;
-    }
-    case 0xF8: {
-      break;
-    }
-    case 0xF9: {
-      break;
-    }
-    case 0xFA: {
-      break;
-    }
-    case 0xFB: {
-      break;
-    }
-    case 0xFC: {
-      break;
-    }
-    case 0xFD: {
-      break;
-    }
-    case 0xFE: {
-      break;
-    }
-    case 0xFF: {
-      break;
-    }
+    // case 0xC4: {
+    //   break;
+    // }
+    // case 0xC5: {
+    //   break;
+    // }
+    // case 0xC6: {
+    //   break;
+    // }
+    // case 0xC7: {
+    //   break;
+    // }
+    // case 0xC8: {
+    //   break;
+    // }
+    // case 0xC9: {
+    //   break;
+    // }
+    // case 0xCA: {
+    //   break;
+    // }
+    // case 0xCB: {
+    //   break;
+    // }
+    // case 0xCC: {
+    //   break;
+    // }
+    // case 0xCD: {
+    //   break;
+    // }
+    // case 0xCE: {
+    //   break;
+    // }
+    // case 0xCF: {
+    //   break;
+    // }
+    // case 0xD0: {
+    //   break;
+    // }
+    // case 0xD1: {
+    //   break;
+    // }
+    // case 0xD2: {
+    //   break;
+    // }
+    // case 0xD3: {
+    //   break;
+    // }
+    // case 0xD4: {
+    //   break;
+    // }
+    // case 0xD5: {
+    //   break;
+    // }
+    // case 0xD6: {
+    //   break;
+    // }
+    // case 0xD7: {
+    //   break;
+    // }
+    // case 0xD8: {
+    //   break;
+    // }
+    // case 0xD9: {
+    //   break;
+    // }
+    // case 0xDA: {
+    //   break;
+    // }
+    // case 0xDB: {
+    //   break;
+    // }
+    // case 0xDC: {
+    //   break;
+    // }
+    // case 0xDD: {
+    //   break;
+    // }
+    // case 0xDE: {
+    //   break;
+    // }
+    // case 0xDF: {
+    //   break;
+    // }
+    // case 0xE0: {
+    //   break;
+    // }
+    // case 0xE1: {
+    //   break;
+    // }
+    // case 0xE2: {
+    //   break;
+    // }
+    // case 0xE3: {
+    //   break;
+    // }
+    // case 0xE4: {
+    //   break;
+    // }
+    // case 0xE5: {
+    //   break;
+    // }
+    // case 0xE6: {
+    //   break;
+    // }
+    // case 0xE7: {
+    //   break;
+    // }
+    // case 0xE8: {
+    //   break;
+    // }
+    // case 0xE9: {
+    //   break;
+    // }
+    // case 0xEA: {
+    //   break;
+    // }
+    // case 0xEB: {
+    //   break;
+    // }
+    // case 0xEC: {
+    //   break;
+    // }
+    // case 0xED: {
+    //   break;
+    // }
+    // case 0xEE: {
+    //   break;
+    // }
+    // case 0xEF: {
+    //   break;
+    // }
+    // case 0xF0: {
+    //   break;
+    // }
+    // case 0xF1: {
+    //   break;
+    // }
+    // case 0xF2: {
+    //   break;
+    // }
+    // case 0xF3: {
+    //   break;
+    // }
+    // case 0xF4: {
+    //   break;
+    // }
+    // case 0xF5: {
+    //   break;
+    // }
+    // case 0xF6: {
+    //   break;
+    // }
+    // case 0xF7: {
+    //   break;
+    // }
+    // case 0xF8: {
+    //   break;
+    // }
+    // case 0xF9: {
+    //   break;
+    // }
+    // case 0xFA: {
+    //   break;
+    // }
+    // case 0xFB: {
+    //   break;
+    // }
+    // case 0xFC: {
+    //   break;
+    // }
+    // case 0xFD: {
+    //   break;
+    // }
+    // case 0xFE: {
+    //   break;
+    // }
+    // case 0xFF: {
+    //   break;
+    // }
     default: {
       info.instructionPrint = `OPCODE ${utils.toHex(rom[registers.pc])} NOT IMPLEMENTED YET`;
       break;
