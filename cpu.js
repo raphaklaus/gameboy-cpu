@@ -2,49 +2,51 @@ const Rom = require('./RawReader.js'),
   opcodes = require('./opcodes'),
   utils = require('./utils.js');
 
+var memory = require('./memory.js'),
+  CPUCore = require('./cpuCore.js'),
+  flags = require('./flags.js'),
+  Register16 = require('./register16.js'),
+  Register8 = require('./register8.js'),
+  end = false;
+
 class CPU {
-  constructor() {
-    this.registers = {
-      af: 0x01b0,
-      bc: 0x13,
-      de: 0xd8,
-      hl: 0x14D,
-      sp: 0xfffe,
-      pc: 0x0, // default to 0x100
-      lcdc: 0x91,
-      mbc: 0x00, // temporary address, change it!
-    };
-
-    this.flags = {
-      zero: '',
-      subtract: '',
-      halfCarry: '',
-      carry: ''
-    };
-
-    this.memory = new Uint8Array(0xFFFF);
-  }
-
   async loadROM() {
     // Load first rom banks: 32kb
     // todo: control rom bank using MBC register to get the home 16kb area
     let rom = new Uint8Array(await Rom.load());
     console.log('length', rom.length);
+    console.log('PC', CPUCore.registers.PC.value);
     // var bytes = [];
 
     // for (var index = 0; index < 4; index++) {
     //   opcodes.read(rom[index]);
     // }
-
-    while (this.registers.pc < 0xFFFF) {
-      console.log('I am at offset:', utils.toHex(this.registers.pc));
-      let info = opcodes.read(rom, this.memory, this.registers, this.flags);
+    var startTime = new Date().getTime();
+    // while (CPUCore.registers.PC.value < 0xFFFF) {
+    while ((new Date()).getTime() - startTime < 3000 )  {
+      console.log('I am at offset:', utils.toHex(CPUCore.registers.PC.value));
+      let info = opcodes.read(rom);
       
       if (!info.leap)
-        this.registers.pc += info.instructionByteLength;
+        CPUCore.registers.PC.value += info.instructionByteLength;
 
       console.log(info.instructionPrint);
     }
+
+    // todo: save registers, flags and memory to file
+
+    console.log('AF', CPUCore.registers.AF);
+    console.log('BC', CPUCore.registers.BC);
+    console.log('DE', CPUCore.registers.DE);
+    console.log('HL', CPUCore.registers.HL);
+    console.log('SP', CPUCore.registers.SP);
+    console.log('PC', CPUCore.registers.PC);
+    
+    console.log('Z Flag', CPUCore.flags.Z);
+    console.log('N Flag', CPUCore.flags.N);
+    console.log('H Flag', CPUCore.flags.H);
+    console.log('C Flag', CPUCore.flags.C); // bug here? needs investigation
+    
 
     // rom.forEach(byte => {
     //   bytes.push(byte);

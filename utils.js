@@ -12,6 +12,38 @@ const toHexCompose = (firstNumber, secondNumber) => {
     ('00' + (firstNumber).toString('16').toUpperCase()).substr(-2)
 }
 
+const Bit7 = value => {
+  return value & 0x80;
+}
+
+const Bit6 = value => {
+  return value & 0x40;
+}
+
+const Bit5 = value => {
+  return value & 0x20;
+}
+
+const Bit4 = value => {
+  return value & 0x10;
+}
+
+const Bit3 = value => {
+  return value & 0x08;
+}
+
+const Bit2 = value => {
+  return value & 0x04;
+}
+
+const Bit1 = value => {
+  return value & 0x02;
+}
+
+const Bit0 = value => {
+  return value & 0x01;
+}
+
 const getHighByte = word => {
   return word & 0xFF;
 };
@@ -48,5 +80,11 @@ const rotateByteLeft = value => {
   return (value << 1) | (value >> 7);
 };
 
+// const prettyPrint = () => {
+//   info.instructionPrint = `LD BC, ${data}`;
+//   info.instructionMnemonic = 'LD BC, d16';
+// }
+
 module.exports = { toHex, toHexCompose, getHighByte, setHighByte, getLowByte, 
-  setLowByte, carriedFromBit3, carriedFromBit11, carriedFromBit15 };
+  setLowByte, carriedFromBit3, carriedFromBit11, carriedFromBit15, borrowedFromBit4,
+  rotateByteLeft, Bit0, Bit1, Bit2, Bit3, Bit4, Bit5, Bit6, Bit7 };

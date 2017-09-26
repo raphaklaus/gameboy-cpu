@@ -1,42 +1,44 @@
-utils = require('./utils');
+const utils = require('./utils');
+
+var CPUCore = require('./cpuCore.js');
 
 const affectFlagsOnIncrement = (value, flags) => {
   if (value === 0)
-    flags.z = 1;
+    CPUCore.CPUCore.flags.Z = 1;
   else
-    flags.z = 0;
+    CPUCore.flags.Z = 0;
 
-  flags.n = 0;
+  CPUCore.flags.N = 0;
 
   if (utils.carriedFromBit3(value))
-    flags.h = 1;
+    CPUCore.flags.H = 1;
   else
-    flags.h = 0;
+    CPUCore.flags.H = 0;
 };
 
 const affectFlagsOnDecrement = (value, flags) => {
   if (value === 0)
-    flags.z = 1;
+    CPUCore.flags.Z = 1;
   else
-    flags.z = 0;
+    CPUCore.flags.Z = 0;
 
-  flags.n = 1;
+  CPUCore.flags.N = 1;
 
   if (utils.carriedFromBit3(value))
-    flags.h = 1;
+    CPUCore.flags.H = 1;
   else
-    flags.h = 0;
+    CPUCore.flags.H = 0;
 };
 
 const affectFlagOnRotateLeft = (value, flags, oldBit7) => {
   if (value === 0)
-    flags.z = 1;
+    CPUCore.flags.Z = 1;
   else
-    flags.z = 0;
+    CPUCore.flags.Z = 0;
 
-  flags.n = 0;
-  flags.h = 0;
-  flags.c = oldBit7;
+  CPUCore.flags.N = 0;
+  CPUCore.flags.H = 0;
+  CPUCore.flags.C = oldBit7;
 };
 
 const affectFlagOnAdd = (value, flags) => {
