@@ -13,35 +13,35 @@ const toHexCompose = (firstNumber, secondNumber) => {
 }
 
 const Bit7 = value => {
-  return value & 0x80;
+  return value & 0x80 ? 1 : 0;
 }
 
 const Bit6 = value => {
-  return value & 0x40;
+  return value & 0x40 ? 1 : 0;
 }
 
 const Bit5 = value => {
-  return value & 0x20;
+  return value & 0x20 ? 1 : 0;
 }
 
 const Bit4 = value => {
-  return value & 0x10;
+  return value & 0x10 ? 1 : 0;
 }
 
 const Bit3 = value => {
-  return value & 0x08;
+  return value & 0x08 ? 1 : 0;
 }
 
 const Bit2 = value => {
-  return value & 0x04;
+  return value & 0x04 ? 1 : 0;
 }
 
 const Bit1 = value => {
-  return value & 0x02;
+  return value & 0x02 ? 1 : 0;
 }
 
 const Bit0 = value => {
-  return value & 0x01;
+  return value & 0x01 ? 1 : 0;
 }
 
 const getHighByte = word => {

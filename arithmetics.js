@@ -42,17 +42,17 @@ const affectFlagOnRotateLeft = (value, flags, oldBit7) => {
 };
 
 const affectFlagOnAdd = (value, flags) => {
-  flag.n = 0;
+  flag.N = 0;
 
   if (utils.carriedFromBit11(value))
-    flag.h = 1;
+    flag.H = 1;
   else
-    flag.h = 0;
+    flag.H = 0;
 
   if (utils.carriedFromBit15(value))
-    flag.c = 1;
+    flag.C = 1;
   else
-    flag.c = 0;
+    flag.C = 0;
 };
 
 module.exports = { affectFlagsOnIncrement, affectFlagsOnDecrement, 
