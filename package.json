@@ -22,6 +22,6 @@
   "homepage": "https://github.com/raphaklaus/gameboy-cpu#readme",
   "dependencies": {
     "bluebird": "^3.5.0",
-    "immutable": "^3.8.1"
+    "keypress": "^0.2.1"
   }
 }
