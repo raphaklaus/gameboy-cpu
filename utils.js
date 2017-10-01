@@ -80,11 +80,57 @@ const rotateByteLeft = value => {
   return (value << 1) | (value >> 7);
 };
 
-// const prettyPrint = () => {
-//   info.instructionPrint = `LD BC, ${data}`;
-//   info.instructionMnemonic = 'LD BC, d16';
-// }
+const translate8BitTo16BitRegister = register => {
+  if (register === 'A')
+    return {
+      name: 'A',
+      composition: 'AF',
+      function: 'High'
+    }
+  else if (register === 'F')
+    return {
+      name: 'F',
+      composition: 'AF',
+      function: 'Low'
+    }
+  else if (register === 'B')
+    return {
+      name: 'B',
+      composition: 'BC',
+      function: 'High'
+    }
+  else if (register === 'C')
+    return {
+      name: 'C',
+      composition: 'BC',
+      function: 'Low'
+    }
+  else if (register === 'D')
+    return {
+      name: 'D',
+      composition: 'DE',
+      function: 'High'
+    }
+  else if (register === 'E')
+    return {
+      name: 'E',
+      composition: 'DE',
+      function: 'Low'
+    }
+  else if (register === 'H')
+    return {
+      name: 'H',
+      composition: 'HL',
+      function: 'High'
+    }
+  else if (register === 'L')
+    return {
+      name: 'L',
+      composition: 'HL',
+      function: 'Low'
+    }
+};
 
 module.exports = { toHex, toHexCompose, getHighByte, setHighByte, getLowByte, 
   setLowByte, carriedFromBit3, carriedFromBit11, carriedFromBit15, borrowedFromBit4,
-  rotateByteLeft, Bit0, Bit1, Bit2, Bit3, Bit4, Bit5, Bit6, Bit7 };
+  rotateByteLeft, Bit0, Bit1, Bit2, Bit3, Bit4, Bit5, Bit6, Bit7, translate8BitTo16BitRegister };

@@ -7,7 +7,7 @@ module.exports = class Register16 {
     return this.value >> 8;
   }
   
-  get Low(){
+  get Low() {
     return this.value & 0xFF;
   }
 

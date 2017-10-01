@@ -799,51 +799,35 @@ const read = (rom) => {
       break;
     }
     case 0x78: {
-      info.instructionByteLength = byteLength[rom[CPUCore.registers.PC.value]];
-      info.cycles = cycles[rom[CPUCore.registers.PC.value]];
-      info.instructionPrint += 'No code for opcode... Jumping';
+      instructions.load8BitRegisterTo8BitRegister(info, ['A', 'B'], opCodeNo);
       break;
     }
     case 0x79: {
-      info.instructionByteLength = byteLength[rom[CPUCore.registers.PC.value]];
-      info.cycles = cycles[rom[CPUCore.registers.PC.value]];
-      info.instructionPrint += 'No code for opcode... Jumping';
+      instructions.load8BitRegisterTo8BitRegister(info, ['A', 'C'], opCodeNo);
       break;
     }
     case 0x7A: {
-      info.instructionByteLength = byteLength[rom[CPUCore.registers.PC.value]];
-      info.cycles = cycles[rom[CPUCore.registers.PC.value]];
-      info.instructionPrint += 'No code for opcode... Jumping';
+      instructions.load8BitRegisterTo8BitRegister(info, ['A', 'D'], opCodeNo);
       break;
     }
     case 0x7B: {
-      info.instructionByteLength = byteLength[rom[CPUCore.registers.PC.value]];
-      info.cycles = cycles[rom[CPUCore.registers.PC.value]];
-      info.instructionPrint += 'No code for opcode... Jumping';
+      instructions.load8BitRegisterTo8BitRegister(info, ['A', 'E'], opCodeNo);
       break;
     }
     case 0x7C: {
-      info.instructionByteLength = byteLength[rom[CPUCore.registers.PC.value]];
-      info.cycles = cycles[rom[CPUCore.registers.PC.value]];
-      info.instructionPrint += 'No code for opcode... Jumping';
+      instructions.load8BitRegisterTo8BitRegister(info, ['A', 'H'], opCodeNo);
       break;
     }
     case 0x7D: {
-      info.instructionByteLength = byteLength[rom[CPUCore.registers.PC.value]];
-      info.cycles = cycles[rom[CPUCore.registers.PC.value]];
-      info.instructionPrint += 'No code for opcode... Jumping';
+      instructions.load8BitRegisterTo8BitRegister(info, ['A', 'L'], opCodeNo);
       break;
     }
     case 0x7E: {
-      info.instructionByteLength = byteLength[rom[CPUCore.registers.PC.value]];
-      info.cycles = cycles[rom[CPUCore.registers.PC.value]];
-      info.instructionPrint += 'No code for opcode... Jumping';
+      instructions.load16BitPointerTo8BitRegister(info, ['A', 'HL'], opCodeNo);
       break;
     }
     case 0x7F: {
-      info.instructionByteLength = byteLength[rom[CPUCore.registers.PC.value]];
-      info.cycles = cycles[rom[CPUCore.registers.PC.value]];
-      info.instructionPrint += 'No code for opcode... Jumping';
+      instructions.load8BitRegisterTo8BitRegister(info, ['A', 'A'], opCodeNo);
       break;
     }
     case 0x80: {
