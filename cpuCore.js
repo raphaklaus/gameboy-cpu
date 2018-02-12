@@ -1,5 +1,5 @@
-const Register16 = require('./register16.js'), 
-  Register8 = require('./register8.js'), 
+const Register16 = require('./register16.js'),
+  Register8 = require('./register8.js'),
   utils = require('./utils.js');
 
 var registers = {
@@ -20,4 +20,4 @@ var flags = {
   C: utils.Bit4(registers.AF.Low)
 };
 
-module.exports = {registers, flags};
+module.exports = { registers, flags };

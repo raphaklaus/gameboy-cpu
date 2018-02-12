@@ -3,7 +3,7 @@ const CPUCore = require('./cpuCore.js'),
   memory = require('./memory.js'),
   cycles = require('./tables.js').cycles,
   utils = require('./utils.js');
-    
+
 const updateByteLengthAndCycles = (info, opCodeNo) => {
   info.instructionByteLength = byteLength[opCodeNo];
   info.cycles = cycles[opCodeNo];
@@ -17,9 +17,9 @@ const nop = (info, opCodeNo) => {
 const load16BitDataTo16BitRegister = (info, register, address, opCodeNo) => {
   info.instructionPrint += `LD ${register}, ${address}`;
   info.instructionMnemonic = 'LD r16, d16';
-  
+
   CPUCore.registers[register].value = parseInt(address, 16);
-  
+
   updateByteLengthAndCycles(info, opCodeNo);
 };
 
@@ -44,5 +44,5 @@ const load16BitPointerTo8BitRegister = (info, registers, opCodeNo) => {
 };
 
 
-module.exports = { nop, load16BitDataTo16BitRegister, load8BitRegisterTo8BitRegister, 
+module.exports = { nop, load16BitDataTo16BitRegister, load8BitRegisterTo8BitRegister,
   load16BitPointerTo8BitRegister };

@@ -1,13 +1,12 @@
 const Rom = require('./RawReader.js'),
-  opcodes = require('./opcodes'),
-  utils = require('./utils.js');
+  opcodes = require('./opcodes');
 
-var memory = require('./memory.js'),
-  CPUCore = require('./cpuCore.js'),
-  //flags = require('./flags.js'),
-  Register16 = require('./register16.js'),
-  Register8 = require('./register8.js'),
-  end = false;
+var CPUCore = require('./cpuCore.js'),
+  timer,
+  counter = 0,
+  rom,
+  lastIterationEnded = true;
+
 
 var keypress = require('keypress');
 
@@ -17,7 +16,7 @@ keypress(process.stdin);
 // listen for the "keypress" event
 process.stdin.on('keypress', function (ch, key) {
   console.log('got "keypress"', key);
-  if (key && key.ctrl && key.name == 'c') {
+  if (key && key.ctrl && key.name === 'c') {
     process.stdin.pause();
     clearInterval(timer);
 
@@ -39,13 +38,6 @@ process.stdin.on('keypress', function (ch, key) {
 process.stdin.setRawMode(true);
 process.stdin.resume();
 
-var counter = 0;
-var rom;
-
-var timer;
-
-var lastIterationEnded = true;
-
 class CPU {
   async loadROM() {
     // Load first rom banks: 32kb
@@ -54,22 +46,22 @@ class CPU {
     console.log('total length', rom.length);
   }
 
-  run() {  
+  run() {
     if (lastIterationEnded) {
       lastIterationEnded = false;
 
       let info = {};
-      
+
       counter++;
-      
-      var startTime = new Date().getTime();
+
+      // var startTime = new Date().getTime();
       // while (CPUCore.registers.PC.value < 0xFFFF) {
       // while ((new Date()).getTime() - startTime < 3000 || end )  {
       info = opcodes.read(rom);
-      
+
       if (!info.leap)
         CPUCore.registers.PC.value += info.instructionByteLength;
-  
+
       console.log(info.instructionPrint);
       // }
 

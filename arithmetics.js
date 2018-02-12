@@ -55,5 +55,5 @@ const affectFlagOnAdd = (value, flags) => {
     flag.C = 0;
 };
 
-module.exports = { affectFlagsOnIncrement, affectFlagsOnDecrement, 
-  affectFlagOnRotateLeft, affectFlagOnAdd};
+module.exports = { affectFlagsOnIncrement, affectFlagsOnDecrement,
+  affectFlagOnRotateLeft, affectFlagOnAdd };

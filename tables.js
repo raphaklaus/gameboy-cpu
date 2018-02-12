@@ -39,4 +39,4 @@ const cycles =
     16, 8, 16, 12, 12, 8, 4, 16, 8, 16, 12, 8, 16, 4, 8, 16
   ];
 
-module.exports = {byteLength, cycles};
+module.exports = { byteLength, cycles };
