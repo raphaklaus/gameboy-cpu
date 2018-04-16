@@ -42,7 +42,7 @@ class CPU {
   async loadROM() {
     // Load first rom banks: 32kb
     // todo: control rom bank using MBC register to get the home 16kb area
-    rom = new Uint8Array(await Rom.load());
+    rom = new Uint8Array(await Rom.load('./roms/Tetris.gb'));
     console.log('total length', rom.length);
   }
 
