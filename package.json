@@ -1,0 +1,30 @@
+{
+  "name": "gameboy-cpu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run:scrapper:dev": "./node_modules/.bin/ts-node-dev --respawn --transpileOnly ./src/scrapper/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raphaklaus/gameboy-cpu.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raphaklaus/gameboy-cpu/issues"
+  },
+  "homepage": "https://github.com/raphaklaus/gameboy-cpu#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.3"
+  },
+  "devDependencies": {
+    "@types/cheerio": "^0.22.9",
+    "@types/node": "^10.9.4",
+    "ts-node-dev": "^1.0.0-pre.30",
+    "tslint": "^5.11.0"
+  }
+}
