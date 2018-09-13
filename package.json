@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "run:scrapper:dev": "./node_modules/.bin/ts-node-dev --respawn --transpileOnly ./src/scrapper/index.ts"
+    "run:dev:scrapper": "./node_modules/.bin/ts-node-dev --respawn --transpileOnly ./src/scrapper/index.ts"
   },
   "repository": {
     "type": "git",
