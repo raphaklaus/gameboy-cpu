@@ -1,0 +1,3509 @@
+[
+    {
+        "mnemonic": "NOP",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "NOP"
+    },
+    {
+        "mnemonic": "LD BC,d16",
+        "byteLength": 3,
+        "cycles": 12,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD (BC),A",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "INC BC",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "INC"
+    },
+    {
+        "mnemonic": "INC B",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 H -",
+        "action": "INC"
+    },
+    {
+        "mnemonic": "DEC B",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 1 H -",
+        "action": "DEC"
+    },
+    {
+        "mnemonic": "LD B,d8",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "RLCA",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "0 0 0 C",
+        "action": "RLCA"
+    },
+    {
+        "mnemonic": "LD (a16),SP",
+        "byteLength": 3,
+        "cycles": 20,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "ADD HL,BC",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "- 0 H C",
+        "action": "ADD"
+    },
+    {
+        "mnemonic": "LD A,(BC)",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "DEC BC",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "DEC"
+    },
+    {
+        "mnemonic": "INC C",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 H -",
+        "action": "INC"
+    },
+    {
+        "mnemonic": "DEC C",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 1 H -",
+        "action": "DEC"
+    },
+    {
+        "mnemonic": "LD C,d8",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "RRCA",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "0 0 0 C",
+        "action": "RRCA"
+    },
+    {
+        "mnemonic": "STOP 0",
+        "byteLength": 2,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "STOP"
+    },
+    {
+        "mnemonic": "LD DE,d16",
+        "byteLength": 3,
+        "cycles": 12,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD (DE),A",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "INC DE",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "INC"
+    },
+    {
+        "mnemonic": "INC D",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 H -",
+        "action": "INC"
+    },
+    {
+        "mnemonic": "DEC D",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 1 H -",
+        "action": "DEC"
+    },
+    {
+        "mnemonic": "LD D,d8",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "RLA",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "0 0 0 C",
+        "action": "RLA"
+    },
+    {
+        "mnemonic": "JR r8",
+        "byteLength": 2,
+        "cycles": 12,
+        "flagsAffected": "- - - -",
+        "action": "JR"
+    },
+    {
+        "mnemonic": "ADD HL,DE",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "- 0 H C",
+        "action": "ADD"
+    },
+    {
+        "mnemonic": "LD A,(DE)",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "DEC DE",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "DEC"
+    },
+    {
+        "mnemonic": "INC E",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 H -",
+        "action": "INC"
+    },
+    {
+        "mnemonic": "DEC E",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 1 H -",
+        "action": "DEC"
+    },
+    {
+        "mnemonic": "LD E,d8",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "RRA",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "0 0 0 C",
+        "action": "RRA"
+    },
+    {
+        "mnemonic": "JR NZ,r8",
+        "byteLength": 2,
+        "cycles": null,
+        "flagsAffected": "- - - -",
+        "action": "JR"
+    },
+    {
+        "mnemonic": "LD HL,d16",
+        "byteLength": 3,
+        "cycles": 12,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD (HL+),A",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "INC HL",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "INC"
+    },
+    {
+        "mnemonic": "INC H",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 H -",
+        "action": "INC"
+    },
+    {
+        "mnemonic": "DEC H",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 1 H -",
+        "action": "DEC"
+    },
+    {
+        "mnemonic": "LD H,d8",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "DAA",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z - 0 C",
+        "action": "DAA"
+    },
+    {
+        "mnemonic": "JR Z,r8",
+        "byteLength": 2,
+        "cycles": null,
+        "flagsAffected": "- - - -",
+        "action": "JR"
+    },
+    {
+        "mnemonic": "ADD HL,HL",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "- 0 H C",
+        "action": "ADD"
+    },
+    {
+        "mnemonic": "LD A,(HL+)",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "DEC HL",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "DEC"
+    },
+    {
+        "mnemonic": "INC L",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 H -",
+        "action": "INC"
+    },
+    {
+        "mnemonic": "DEC L",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 1 H -",
+        "action": "DEC"
+    },
+    {
+        "mnemonic": "LD L,d8",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "CPL",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- 1 1 -",
+        "action": "CPL"
+    },
+    {
+        "mnemonic": "JR NC,r8",
+        "byteLength": 2,
+        "cycles": null,
+        "flagsAffected": "- - - -",
+        "action": "JR"
+    },
+    {
+        "mnemonic": "LD SP,d16",
+        "byteLength": 3,
+        "cycles": 12,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD (HL-),A",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "INC SP",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "INC"
+    },
+    {
+        "mnemonic": "INC (HL)",
+        "byteLength": 1,
+        "cycles": 12,
+        "flagsAffected": "Z 0 H -",
+        "action": "INC"
+    },
+    {
+        "mnemonic": "DEC (HL)",
+        "byteLength": 1,
+        "cycles": 12,
+        "flagsAffected": "Z 1 H -",
+        "action": "DEC"
+    },
+    {
+        "mnemonic": "LD (HL),d8",
+        "byteLength": 2,
+        "cycles": 12,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "SCF",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- 0 0 1",
+        "action": "SCF"
+    },
+    {
+        "mnemonic": "JR C,r8",
+        "byteLength": 2,
+        "cycles": null,
+        "flagsAffected": "- - - -",
+        "action": "JR"
+    },
+    {
+        "mnemonic": "ADD HL,SP",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "- 0 H C",
+        "action": "ADD"
+    },
+    {
+        "mnemonic": "LD A,(HL-)",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "DEC SP",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "DEC"
+    },
+    {
+        "mnemonic": "INC A",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 H -",
+        "action": "INC"
+    },
+    {
+        "mnemonic": "DEC A",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 1 H -",
+        "action": "DEC"
+    },
+    {
+        "mnemonic": "LD A,d8",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "CCF",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- 0 0 C",
+        "action": "CCF"
+    },
+    {
+        "mnemonic": "LD B,B",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD B,C",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD B,D",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD B,E",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD B,H",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD B,L",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD B,(HL)",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD B,A",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD C,B",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD C,C",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD C,D",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD C,E",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD C,H",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD C,L",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD C,(HL)",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD C,A",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD D,B",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD D,C",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD D,D",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD D,E",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD D,H",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD D,L",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD D,(HL)",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD D,A",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD E,B",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD E,C",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD E,D",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD E,E",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD E,H",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD E,L",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD E,(HL)",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD E,A",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD H,B",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD H,C",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD H,D",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD H,E",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD H,H",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD H,L",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD H,(HL)",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD H,A",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD L,B",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD L,C",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD L,D",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD L,E",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD L,H",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD L,L",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD L,(HL)",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD L,A",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD (HL),B",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD (HL),C",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD (HL),D",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD (HL),E",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD (HL),H",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD (HL),L",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "HALT",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "HALT"
+    },
+    {
+        "mnemonic": "LD (HL),A",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD A,B",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD A,C",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD A,D",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD A,E",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD A,H",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD A,L",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD A,(HL)",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD A,A",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "ADD A,B",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 H C",
+        "action": "ADD"
+    },
+    {
+        "mnemonic": "ADD A,C",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 H C",
+        "action": "ADD"
+    },
+    {
+        "mnemonic": "ADD A,D",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 H C",
+        "action": "ADD"
+    },
+    {
+        "mnemonic": "ADD A,E",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 H C",
+        "action": "ADD"
+    },
+    {
+        "mnemonic": "ADD A,H",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 H C",
+        "action": "ADD"
+    },
+    {
+        "mnemonic": "ADD A,L",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 H C",
+        "action": "ADD"
+    },
+    {
+        "mnemonic": "ADD A,(HL)",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "Z 0 H C",
+        "action": "ADD"
+    },
+    {
+        "mnemonic": "ADD A,A",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 H C",
+        "action": "ADD"
+    },
+    {
+        "mnemonic": "ADC A,B",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 H C",
+        "action": "ADC"
+    },
+    {
+        "mnemonic": "ADC A,C",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 H C",
+        "action": "ADC"
+    },
+    {
+        "mnemonic": "ADC A,D",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 H C",
+        "action": "ADC"
+    },
+    {
+        "mnemonic": "ADC A,E",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 H C",
+        "action": "ADC"
+    },
+    {
+        "mnemonic": "ADC A,H",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 H C",
+        "action": "ADC"
+    },
+    {
+        "mnemonic": "ADC A,L",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 H C",
+        "action": "ADC"
+    },
+    {
+        "mnemonic": "ADC A,(HL)",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "Z 0 H C",
+        "action": "ADC"
+    },
+    {
+        "mnemonic": "ADC A,A",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 H C",
+        "action": "ADC"
+    },
+    {
+        "mnemonic": "SUB B",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 1 H C",
+        "action": "SUB"
+    },
+    {
+        "mnemonic": "SUB C",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 1 H C",
+        "action": "SUB"
+    },
+    {
+        "mnemonic": "SUB D",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 1 H C",
+        "action": "SUB"
+    },
+    {
+        "mnemonic": "SUB E",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 1 H C",
+        "action": "SUB"
+    },
+    {
+        "mnemonic": "SUB H",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 1 H C",
+        "action": "SUB"
+    },
+    {
+        "mnemonic": "SUB L",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 1 H C",
+        "action": "SUB"
+    },
+    {
+        "mnemonic": "SUB (HL)",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "Z 1 H C",
+        "action": "SUB"
+    },
+    {
+        "mnemonic": "SUB A",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 1 H C",
+        "action": "SUB"
+    },
+    {
+        "mnemonic": "SBC A,B",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 1 H C",
+        "action": "SBC"
+    },
+    {
+        "mnemonic": "SBC A,C",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 1 H C",
+        "action": "SBC"
+    },
+    {
+        "mnemonic": "SBC A,D",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 1 H C",
+        "action": "SBC"
+    },
+    {
+        "mnemonic": "SBC A,E",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 1 H C",
+        "action": "SBC"
+    },
+    {
+        "mnemonic": "SBC A,H",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 1 H C",
+        "action": "SBC"
+    },
+    {
+        "mnemonic": "SBC A,L",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 1 H C",
+        "action": "SBC"
+    },
+    {
+        "mnemonic": "SBC A,(HL)",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "Z 1 H C",
+        "action": "SBC"
+    },
+    {
+        "mnemonic": "SBC A,A",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 1 H C",
+        "action": "SBC"
+    },
+    {
+        "mnemonic": "AND B",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 1 0",
+        "action": "AND"
+    },
+    {
+        "mnemonic": "AND C",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 1 0",
+        "action": "AND"
+    },
+    {
+        "mnemonic": "AND D",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 1 0",
+        "action": "AND"
+    },
+    {
+        "mnemonic": "AND E",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 1 0",
+        "action": "AND"
+    },
+    {
+        "mnemonic": "AND H",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 1 0",
+        "action": "AND"
+    },
+    {
+        "mnemonic": "AND L",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 1 0",
+        "action": "AND"
+    },
+    {
+        "mnemonic": "AND (HL)",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 0",
+        "action": "AND"
+    },
+    {
+        "mnemonic": "AND A",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 1 0",
+        "action": "AND"
+    },
+    {
+        "mnemonic": "XOR B",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 0 0",
+        "action": "XOR"
+    },
+    {
+        "mnemonic": "XOR C",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 0 0",
+        "action": "XOR"
+    },
+    {
+        "mnemonic": "XOR D",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 0 0",
+        "action": "XOR"
+    },
+    {
+        "mnemonic": "XOR E",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 0 0",
+        "action": "XOR"
+    },
+    {
+        "mnemonic": "XOR H",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 0 0",
+        "action": "XOR"
+    },
+    {
+        "mnemonic": "XOR L",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 0 0",
+        "action": "XOR"
+    },
+    {
+        "mnemonic": "XOR (HL)",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 0",
+        "action": "XOR"
+    },
+    {
+        "mnemonic": "XOR A",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 0 0",
+        "action": "XOR"
+    },
+    {
+        "mnemonic": "OR B",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 0 0",
+        "action": "OR"
+    },
+    {
+        "mnemonic": "OR C",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 0 0",
+        "action": "OR"
+    },
+    {
+        "mnemonic": "OR D",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 0 0",
+        "action": "OR"
+    },
+    {
+        "mnemonic": "OR E",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 0 0",
+        "action": "OR"
+    },
+    {
+        "mnemonic": "OR H",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 0 0",
+        "action": "OR"
+    },
+    {
+        "mnemonic": "OR L",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 0 0",
+        "action": "OR"
+    },
+    {
+        "mnemonic": "OR (HL)",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 0",
+        "action": "OR"
+    },
+    {
+        "mnemonic": "OR A",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 0 0 0",
+        "action": "OR"
+    },
+    {
+        "mnemonic": "CP B",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 1 H C",
+        "action": "CP"
+    },
+    {
+        "mnemonic": "CP C",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 1 H C",
+        "action": "CP"
+    },
+    {
+        "mnemonic": "CP D",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 1 H C",
+        "action": "CP"
+    },
+    {
+        "mnemonic": "CP E",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 1 H C",
+        "action": "CP"
+    },
+    {
+        "mnemonic": "CP H",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 1 H C",
+        "action": "CP"
+    },
+    {
+        "mnemonic": "CP L",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 1 H C",
+        "action": "CP"
+    },
+    {
+        "mnemonic": "CP (HL)",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "Z 1 H C",
+        "action": "CP"
+    },
+    {
+        "mnemonic": "CP A",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "Z 1 H C",
+        "action": "CP"
+    },
+    {
+        "mnemonic": "RET NZ",
+        "byteLength": 1,
+        "cycles": null,
+        "flagsAffected": "- - - -",
+        "action": "RET"
+    },
+    {
+        "mnemonic": "POP BC",
+        "byteLength": 1,
+        "cycles": 12,
+        "flagsAffected": "- - - -",
+        "action": "POP"
+    },
+    {
+        "mnemonic": "JP NZ,a16",
+        "byteLength": 3,
+        "cycles": null,
+        "flagsAffected": "- - - -",
+        "action": "JP"
+    },
+    {
+        "mnemonic": "JP a16",
+        "byteLength": 3,
+        "cycles": 16,
+        "flagsAffected": "- - - -",
+        "action": "JP"
+    },
+    {
+        "mnemonic": "CALL NZ,a16",
+        "byteLength": 3,
+        "cycles": null,
+        "flagsAffected": "- - - -",
+        "action": "CALL"
+    },
+    {
+        "mnemonic": "PUSH BC",
+        "byteLength": 1,
+        "cycles": 16,
+        "flagsAffected": "- - - -",
+        "action": "PUSH"
+    },
+    {
+        "mnemonic": "ADD A,d8",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 H C",
+        "action": "ADD"
+    },
+    {
+        "mnemonic": "RST 00H",
+        "byteLength": 1,
+        "cycles": 16,
+        "flagsAffected": "- - - -",
+        "action": "RST"
+    },
+    {
+        "mnemonic": "RET Z",
+        "byteLength": 1,
+        "cycles": null,
+        "flagsAffected": "- - - -",
+        "action": "RET"
+    },
+    {
+        "mnemonic": "RET",
+        "byteLength": 1,
+        "cycles": 16,
+        "flagsAffected": "- - - -",
+        "action": "RET"
+    },
+    {
+        "mnemonic": "JP Z,a16",
+        "byteLength": 3,
+        "cycles": null,
+        "flagsAffected": "- - - -",
+        "action": "JP"
+    },
+    {
+        "mnemonic": "PREFIX CB",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "PREFIX"
+    },
+    {
+        "mnemonic": "CALL Z,a16",
+        "byteLength": 3,
+        "cycles": null,
+        "flagsAffected": "- - - -",
+        "action": "CALL"
+    },
+    {
+        "mnemonic": "CALL a16",
+        "byteLength": 3,
+        "cycles": 24,
+        "flagsAffected": "- - - -",
+        "action": "CALL"
+    },
+    {
+        "mnemonic": "ADC A,d8",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 H C",
+        "action": "ADC"
+    },
+    {
+        "mnemonic": "RST 08H",
+        "byteLength": 1,
+        "cycles": 16,
+        "flagsAffected": "- - - -",
+        "action": "RST"
+    },
+    {
+        "mnemonic": "RET NC",
+        "byteLength": 1,
+        "cycles": null,
+        "flagsAffected": "- - - -",
+        "action": "RET"
+    },
+    {
+        "mnemonic": "POP DE",
+        "byteLength": 1,
+        "cycles": 12,
+        "flagsAffected": "- - - -",
+        "action": "POP"
+    },
+    {
+        "mnemonic": "JP NC,a16",
+        "byteLength": 3,
+        "cycles": null,
+        "flagsAffected": "- - - -",
+        "action": "JP"
+    },
+    {
+        "mnemonic": "CALL NC,a16",
+        "byteLength": 3,
+        "cycles": null,
+        "flagsAffected": "- - - -",
+        "action": "CALL"
+    },
+    {
+        "mnemonic": "PUSH DE",
+        "byteLength": 1,
+        "cycles": 16,
+        "flagsAffected": "- - - -",
+        "action": "PUSH"
+    },
+    {
+        "mnemonic": "SUB d8",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 1 H C",
+        "action": "SUB"
+    },
+    {
+        "mnemonic": "RST 10H",
+        "byteLength": 1,
+        "cycles": 16,
+        "flagsAffected": "- - - -",
+        "action": "RST"
+    },
+    {
+        "mnemonic": "RET C",
+        "byteLength": 1,
+        "cycles": null,
+        "flagsAffected": "- - - -",
+        "action": "RET"
+    },
+    {
+        "mnemonic": "RETI",
+        "byteLength": 1,
+        "cycles": 16,
+        "flagsAffected": "- - - -",
+        "action": "RETI"
+    },
+    {
+        "mnemonic": "JP C,a16",
+        "byteLength": 3,
+        "cycles": null,
+        "flagsAffected": "- - - -",
+        "action": "JP"
+    },
+    {
+        "mnemonic": "CALL C,a16",
+        "byteLength": 3,
+        "cycles": null,
+        "flagsAffected": "- - - -",
+        "action": "CALL"
+    },
+    {
+        "mnemonic": "SBC A,d8",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 1 H C",
+        "action": "SBC"
+    },
+    {
+        "mnemonic": "RST 1 8H",
+        "byteLength": 1,
+        "cycles": 16,
+        "flagsAffected": "- - - -",
+        "action": "RST"
+    },
+    {
+        "mnemonic": "LDH (a8),A",
+        "byteLength": 2,
+        "cycles": 12,
+        "flagsAffected": "- - - -",
+        "action": "LDH"
+    },
+    {
+        "mnemonic": "POP HL",
+        "byteLength": 1,
+        "cycles": 12,
+        "flagsAffected": "- - - -",
+        "action": "POP"
+    },
+    {
+        "mnemonic": "LD (C),A",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "PUSH HL",
+        "byteLength": 1,
+        "cycles": 16,
+        "flagsAffected": "- - - -",
+        "action": "PUSH"
+    },
+    {
+        "mnemonic": "AND d8",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 0",
+        "action": "AND"
+    },
+    {
+        "mnemonic": "RST 20H",
+        "byteLength": 1,
+        "cycles": 16,
+        "flagsAffected": "- - - -",
+        "action": "RST"
+    },
+    {
+        "mnemonic": "ADD SP,r8",
+        "byteLength": 2,
+        "cycles": 16,
+        "flagsAffected": "0 0 H C",
+        "action": "ADD"
+    },
+    {
+        "mnemonic": "JP (HL)",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "JP"
+    },
+    {
+        "mnemonic": "LD (a16),A",
+        "byteLength": 3,
+        "cycles": 16,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "XOR d8",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 0",
+        "action": "XOR"
+    },
+    {
+        "mnemonic": "RST 2 8H",
+        "byteLength": 1,
+        "cycles": 16,
+        "flagsAffected": "- - - -",
+        "action": "RST"
+    },
+    {
+        "mnemonic": "LDH A,(a8)",
+        "byteLength": 2,
+        "cycles": 12,
+        "flagsAffected": "- - - -",
+        "action": "LDH"
+    },
+    {
+        "mnemonic": "POP AF",
+        "byteLength": 1,
+        "cycles": 12,
+        "flagsAffected": "Z N H C",
+        "action": "POP"
+    },
+    {
+        "mnemonic": "LD A,(C)",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "DI",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "DI"
+    },
+    {
+        "mnemonic": "PUSH AF",
+        "byteLength": 1,
+        "cycles": 16,
+        "flagsAffected": "- - - -",
+        "action": "PUSH"
+    },
+    {
+        "mnemonic": "OR d8",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 0",
+        "action": "OR"
+    },
+    {
+        "mnemonic": "RST 30H",
+        "byteLength": 1,
+        "cycles": 16,
+        "flagsAffected": "- - - -",
+        "action": "RST"
+    },
+    {
+        "mnemonic": "LD HL,SP+r8",
+        "byteLength": 2,
+        "cycles": 12,
+        "flagsAffected": "0 0 H C",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD SP,HL",
+        "byteLength": 1,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "LD A,(a16)",
+        "byteLength": 3,
+        "cycles": 16,
+        "flagsAffected": "- - - -",
+        "action": "LD"
+    },
+    {
+        "mnemonic": "EI",
+        "byteLength": 1,
+        "cycles": 4,
+        "flagsAffected": "- - - -",
+        "action": "EI"
+    },
+    {
+        "mnemonic": "CP d8",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 1 H C",
+        "action": "CP"
+    },
+    {
+        "mnemonic": "RST 38H",
+        "byteLength": 1,
+        "cycles": 16,
+        "flagsAffected": "- - - -",
+        "action": "RST"
+    },
+    {
+        "mnemonic": "RLC B",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "RLC"
+    },
+    {
+        "mnemonic": "RLC C",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "RLC"
+    },
+    {
+        "mnemonic": "RLC D",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "RLC"
+    },
+    {
+        "mnemonic": "RLC E",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "RLC"
+    },
+    {
+        "mnemonic": "RLC H",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "RLC"
+    },
+    {
+        "mnemonic": "RLC L",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "RLC"
+    },
+    {
+        "mnemonic": "RLC (HL)",
+        "byteLength": 2,
+        "cycles": 16,
+        "flagsAffected": "Z 0 0 C",
+        "action": "RLC"
+    },
+    {
+        "mnemonic": "RLC A",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "RLC"
+    },
+    {
+        "mnemonic": "RRC B",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "RRC"
+    },
+    {
+        "mnemonic": "RRC C",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "RRC"
+    },
+    {
+        "mnemonic": "RRC D",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "RRC"
+    },
+    {
+        "mnemonic": "RRC E",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "RRC"
+    },
+    {
+        "mnemonic": "RRC H",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "RRC"
+    },
+    {
+        "mnemonic": "RRC L",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "RRC"
+    },
+    {
+        "mnemonic": "RRC (HL)",
+        "byteLength": 2,
+        "cycles": 16,
+        "flagsAffected": "Z 0 0 C",
+        "action": "RRC"
+    },
+    {
+        "mnemonic": "RRC A",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "RRC"
+    },
+    {
+        "mnemonic": "RL B",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "RL"
+    },
+    {
+        "mnemonic": "RL C",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "RL"
+    },
+    {
+        "mnemonic": "RL D",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "RL"
+    },
+    {
+        "mnemonic": "RL E",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "RL"
+    },
+    {
+        "mnemonic": "RL H",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "RL"
+    },
+    {
+        "mnemonic": "RL L",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "RL"
+    },
+    {
+        "mnemonic": "RL (HL)",
+        "byteLength": 2,
+        "cycles": 16,
+        "flagsAffected": "Z 0 0 C",
+        "action": "RL"
+    },
+    {
+        "mnemonic": "RL A",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "RL"
+    },
+    {
+        "mnemonic": "RR B",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "RR"
+    },
+    {
+        "mnemonic": "RR C",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "RR"
+    },
+    {
+        "mnemonic": "RR D",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "RR"
+    },
+    {
+        "mnemonic": "RR E",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "RR"
+    },
+    {
+        "mnemonic": "RR H",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "RR"
+    },
+    {
+        "mnemonic": "RR L",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "RR"
+    },
+    {
+        "mnemonic": "RR (HL)",
+        "byteLength": 2,
+        "cycles": 16,
+        "flagsAffected": "Z 0 0 C",
+        "action": "RR"
+    },
+    {
+        "mnemonic": "RR A",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "RR"
+    },
+    {
+        "mnemonic": "SLA B",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "SLA"
+    },
+    {
+        "mnemonic": "SLA C",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "SLA"
+    },
+    {
+        "mnemonic": "SLA D",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "SLA"
+    },
+    {
+        "mnemonic": "SLA E",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "SLA"
+    },
+    {
+        "mnemonic": "SLA H",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "SLA"
+    },
+    {
+        "mnemonic": "SLA L",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "SLA"
+    },
+    {
+        "mnemonic": "SLA (HL)",
+        "byteLength": 2,
+        "cycles": 16,
+        "flagsAffected": "Z 0 0 C",
+        "action": "SLA"
+    },
+    {
+        "mnemonic": "SLA A",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "SLA"
+    },
+    {
+        "mnemonic": "SRA B",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 0",
+        "action": "SRA"
+    },
+    {
+        "mnemonic": "SRA C",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 0",
+        "action": "SRA"
+    },
+    {
+        "mnemonic": "SRA D",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 0",
+        "action": "SRA"
+    },
+    {
+        "mnemonic": "SRA E",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 0",
+        "action": "SRA"
+    },
+    {
+        "mnemonic": "SRA H",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 0",
+        "action": "SRA"
+    },
+    {
+        "mnemonic": "SRA L",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 0",
+        "action": "SRA"
+    },
+    {
+        "mnemonic": "SRA (HL)",
+        "byteLength": 2,
+        "cycles": 16,
+        "flagsAffected": "Z 0 0 0",
+        "action": "SRA"
+    },
+    {
+        "mnemonic": "SRA A",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 0",
+        "action": "SRA"
+    },
+    {
+        "mnemonic": "SWAP B",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 0",
+        "action": "SWAP"
+    },
+    {
+        "mnemonic": "SWAP C",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 0",
+        "action": "SWAP"
+    },
+    {
+        "mnemonic": "SWAP D",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 0",
+        "action": "SWAP"
+    },
+    {
+        "mnemonic": "SWAP E",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 0",
+        "action": "SWAP"
+    },
+    {
+        "mnemonic": "SWAP H",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 0",
+        "action": "SWAP"
+    },
+    {
+        "mnemonic": "SWAP L",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 0",
+        "action": "SWAP"
+    },
+    {
+        "mnemonic": "SWAP (HL)",
+        "byteLength": 2,
+        "cycles": 16,
+        "flagsAffected": "Z 0 0 0",
+        "action": "SWAP"
+    },
+    {
+        "mnemonic": "SWAP A",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 0",
+        "action": "SWAP"
+    },
+    {
+        "mnemonic": "SRL B",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "SRL"
+    },
+    {
+        "mnemonic": "SRL C",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "SRL"
+    },
+    {
+        "mnemonic": "SRL D",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "SRL"
+    },
+    {
+        "mnemonic": "SRL E",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "SRL"
+    },
+    {
+        "mnemonic": "SRL H",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "SRL"
+    },
+    {
+        "mnemonic": "SRL L",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "SRL"
+    },
+    {
+        "mnemonic": "SRL (HL)",
+        "byteLength": 2,
+        "cycles": 16,
+        "flagsAffected": "Z 0 0 C",
+        "action": "SRL"
+    },
+    {
+        "mnemonic": "SRL A",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 0 C",
+        "action": "SRL"
+    },
+    {
+        "mnemonic": "BIT 0,B",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 0,C",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 0,D",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 0,E",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 0,H",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 0,L",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 0,(HL)",
+        "byteLength": 2,
+        "cycles": 16,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 0,A",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 1,B",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 1,C",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 1,D",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 1,E",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 1,H",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 1,L",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 1,(HL)",
+        "byteLength": 2,
+        "cycles": 16,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 1,A",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 2,B",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 2,C",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 2,D",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 2,E",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 2,H",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 2,L",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 2,(HL)",
+        "byteLength": 2,
+        "cycles": 16,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 2,A",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 3,B",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 3,C",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 3,D",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 3,E",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 3,H",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 3,L",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 3,(HL)",
+        "byteLength": 2,
+        "cycles": 16,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 3,A",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 4,B",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 4,C",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 4,D",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 4,E",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 4,H",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 4,L",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 4,(HL)",
+        "byteLength": 2,
+        "cycles": 16,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 4,A",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 5,B",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 5,C",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 5,D",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 5,E",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 5,H",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 5,L",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 5,(HL)",
+        "byteLength": 2,
+        "cycles": 16,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 5,A",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 6,B",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 6,C",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 6,D",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 6,E",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 6,H",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 6,L",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 6,(HL)",
+        "byteLength": 2,
+        "cycles": 16,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 6,A",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 7,B",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 7,C",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 7,D",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 7,E",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 7,H",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 7,L",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 7,(HL)",
+        "byteLength": 2,
+        "cycles": 16,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "BIT 7,A",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "Z 0 1 -",
+        "action": "BIT"
+    },
+    {
+        "mnemonic": "RES 0,B",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 0,C",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 0,D",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 0,E",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 0,H",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 0,L",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 0,(HL)",
+        "byteLength": 2,
+        "cycles": 16,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 0,A",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 1,B",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 1,C",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 1,D",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 1,E",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 1,H",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 1,L",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 1,(HL)",
+        "byteLength": 2,
+        "cycles": 16,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 1,A",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 2,B",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 2,C",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 2,D",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 2,E",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 2,H",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 2,L",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 2,(HL)",
+        "byteLength": 2,
+        "cycles": 16,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 2,A",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 3,B",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 3,C",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 3,D",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 3,E",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 3,H",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 3,L",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 3,(HL)",
+        "byteLength": 2,
+        "cycles": 16,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 3,A",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 4,B",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 4,C",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 4,D",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 4,E",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 4,H",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 4,L",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 4,(HL)",
+        "byteLength": 2,
+        "cycles": 16,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 4,A",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 5,B",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 5,C",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 5,D",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 5,E",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 5,H",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 5,L",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 5,(HL)",
+        "byteLength": 2,
+        "cycles": 16,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 5,A",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 6,B",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 6,C",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 6,D",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 6,E",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 6,H",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 6,L",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 6,(HL)",
+        "byteLength": 2,
+        "cycles": 16,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 6,A",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 7,B",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 7,C",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 7,D",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 7,E",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 7,H",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 7,L",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 7,(HL)",
+        "byteLength": 2,
+        "cycles": 16,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "RES 7,A",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "RES"
+    },
+    {
+        "mnemonic": "SET 0,B",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 0,C",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 0,D",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 0,E",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 0,H",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 0,L",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 0,(HL)",
+        "byteLength": 2,
+        "cycles": 16,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 0,A",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 1,B",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 1,C",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 1,D",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 1,E",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 1,H",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 1,L",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 1,(HL)",
+        "byteLength": 2,
+        "cycles": 16,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 1,A",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 2,B",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 2,C",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 2,D",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 2,E",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 2,H",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 2,L",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 2,(HL)",
+        "byteLength": 2,
+        "cycles": 16,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 2,A",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 3,B",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 3,C",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 3,D",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 3,E",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 3,H",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 3,L",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 3,(HL)",
+        "byteLength": 2,
+        "cycles": 16,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 3,A",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 4,B",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 4,C",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 4,D",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 4,E",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 4,H",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 4,L",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 4,(HL)",
+        "byteLength": 2,
+        "cycles": 16,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 4,A",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 5,B",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 5,C",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 5,D",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 5,E",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 5,H",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 5,L",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 5,(HL)",
+        "byteLength": 2,
+        "cycles": 16,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 5,A",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 6,B",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 6,C",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 6,D",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 6,E",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 6,H",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 6,L",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 6,(HL)",
+        "byteLength": 2,
+        "cycles": 16,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 6,A",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 7,B",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 7,C",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 7,D",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 7,E",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 7,H",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 7,L",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 7,(HL)",
+        "byteLength": 2,
+        "cycles": 16,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    },
+    {
+        "mnemonic": "SET 7,A",
+        "byteLength": 2,
+        "cycles": 8,
+        "flagsAffected": "- - - -",
+        "action": "SET"
+    }
+]
