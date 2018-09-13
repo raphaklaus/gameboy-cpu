@@ -17,7 +17,7 @@ const valueFromMemory = (mnemonic: string) => {
   return mnemonic.indexOf('(') >= 0
 }
 
-export const getRegistersDetails = (mnemonic: string) => {
+const getRegistersDetails = (mnemonic: string) => {
   if (checkDoubleMember(mnemonic)) {
     return {
       registerDetails: {
@@ -48,7 +48,7 @@ const parseFlags = (flags: string) => {
   })
 }
 
-export const getFlagsAffected = (flags: string) => {
+const getFlagsAffected = (flags: string) => {
   const transformedFlags = parseFlags(flags)
 
   return {
@@ -59,4 +59,29 @@ export const getFlagsAffected = (flags: string) => {
       c: transformedFlags[3]
     }
   }
+}
+
+export const tableParser = ($: CheerioStatic, table: string) => {
+  return $(`.${table} > tbody > tr > td`).map((_, element) => {
+    if ($(element).children().length === 0) {
+      return {
+        inexistentOpcode: true
+      }
+    }
+
+    const partial = $(element).text().split(/\n/)
+
+    const firstLine = partial[0]
+    const secondLine = partial[1].trimLeft().split(' ')
+    const thirdLine = partial[2].trimLeft()
+
+    return {
+      mnemonic: firstLine,
+      byteLength: +secondLine[0],
+      cycles: +secondLine[1],
+      ...getFlagsAffected(thirdLine),
+      operation: firstLine.split(' ')[0],
+      ...getRegistersDetails(firstLine)
+    }
+  }).get()
 }
