@@ -1,5 +1,6 @@
 import cheerio from 'cheerio'
 import { promises } from 'fs'
+import { getRegistersDetails, getFlagsAffected } from './parser';
 
 (async () => {
   const $ = cheerio.load((await promises.readFile(__dirname + '/opcodes.html')).toString())
@@ -10,13 +11,15 @@ import { promises } from 'fs'
 
     const firstLine = partial[0]
     const secondLine = partial[1].trimLeft().split(' ')
+    const thirdLine = partial[2].trimLeft()
 
     return {
       mnemonic: firstLine,
       byteLength: +secondLine[0],
       cycles: +secondLine[1],
-      flagsAffected: partial[2].trimLeft(),
-      action: firstLine.split(' ')[0]
+      ...getFlagsAffected(thirdLine),
+      operation: firstLine.split(' ')[0],
+      ...getRegistersDetails(firstLine)
     }
   }).get()
 
