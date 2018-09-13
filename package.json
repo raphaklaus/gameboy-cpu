@@ -18,12 +18,14 @@
   "homepage": "https://github.com/raphaklaus/gameboy-cpu#readme",
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
+    "ramda": "^0.25.0",
     "ts-node": "^7.0.1",
     "typescript": "^3.0.3"
   },
   "devDependencies": {
     "@types/cheerio": "^0.22.9",
     "@types/node": "^10.9.4",
+    "@types/ramda": "^0.25.38",
     "ts-node-dev": "^1.0.0-pre.30",
     "tslint": "^5.11.0"
   }
