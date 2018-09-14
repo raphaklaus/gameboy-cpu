@@ -1,5 +1,5 @@
-import { RegisterSemantics } from "../../core/register-semantics.enum";
-import { FlagBehavior } from "../../core/flag-behavior.enum";
+import { RegisterSemantics } from "../core/register-semantics.enum";
+import { FlagBehavior } from "../core/flag-behavior.enum";
 
 const checkDoubleMember = (mnemonic: string) => {
   return mnemonic.indexOf(',') >= 0
