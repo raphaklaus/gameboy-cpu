@@ -7,3 +7,8 @@ export const dolarHex = (parameters: number[]) => {
 
   return `$${first}`
 }
+
+export const replaceAddressPlacehold = (mnemonic: string, value: string) => {
+  const placeholders = ['r8', 'd8', 'a8', 'a16', 'd16']
+  return mnemonic.replace(new RegExp(placeholders.join('|')), value)
+}
