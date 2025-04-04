@@ -6,7 +6,7 @@ Understand how CPU's works in low level but keeping the implementation at the hi
 
 The idea is scrapping the CPU manuals to retrieve most data possible and make the CPU implementation less manual.
 
-This is a WIP project, you can take a look at the `output.json` inside `src/scrapper` to have an idea how the specifications is been built.
+This is a WIP project, you can take a look at the `output.json` inside `src/scrapper` to have an idea how the specifications is being built.
 
 All the opcodes are separated by groups of operations. Like `ld`, `call` and `bit` since there is no need to have repeated blocks of code, I just tweak each opcode with the informations from `output.json` mentioned earlier.
 
